@@ -1,0 +1,297 @@
+/* Global */
+:root{
+    --azul:#cbf3f0;
+    --naranja: #ffbf69;
+    --naranjaDos: #fc2e20;
+    --gris:#333333;
+    --blanco:#fff;
+    --negro:#000;
+}
+html {
+    font-size: 62.5%; /* =10px */
+    box-sizing: border-box;
+}
+  
+/* Establece el tamaño base en 10px lo que facilita la conversión */
+svg{
+    transition: .5s;
+}
+body {
+    font-size: 1.6rem; /* =16px */
+}
+h1,h2,h3,p,a,ul,li{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    width: 100%;
+}
+.slider__titulo{
+    margin: 0px;
+}
+h1 {
+    font-size: 3.2rem; /* =32px */
+}
+h2 {
+    font-size: 2.4rem; /* =24px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.espaciador{
+    padding: 0rem 9rem;
+}
+.contenedor{
+    width: 100%;
+}
+.logo{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.boton{
+    text-decoration: none;
+    padding: 1.5rem 4.5rem;
+    font-weight: 700;
+    color: var(--negro);
+    background-color: var(--naranja);
+    transition: .5s;
+}
+.boton--verde{
+    background-color: var(--azul);
+}
+.encima:hover{
+    transform: scale(.9);
+    transition: .5s;
+}
+.centar--texto{
+    text-align: center;
+}
+/* Header */
+.header{
+    width: 100%;
+    height: 50rem;
+    background-color: var(--naranja);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+.navegacion{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8rem;
+    background-color: var(--naranja);
+}
+.navegacion__lista{
+    list-style: none;
+    display: flex;
+    column-gap: 5rem;
+}
+.navegacion__link{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 1.8rem;
+}
+/* slider */
+.slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    row-gap: 3rem;
+    padding-right: 10rem;
+}
+.imagenSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flecha{
+    cursor: pointer;
+}
+.imagen__paleta{
+    width: 100%;
+    height: 40rem;
+    transform: translateX(255px);
+    user-select: none;
+    transition: .1s ease-in;
+}
+.imagen__paletaRoja{
+    width: 100%;
+    height: 40rem;
+    transform: translateX(255px);
+    user-select: none;
+    transition: .1s ease-in;
+}
+.imagen__paletaRojaA{
+    transform: translateX(-255px);
+    transition: .1s ease-in;
+}
+.imagen__paletaDos{
+    transform: translateX(-255px);
+    transition: .1s ease-in;
+}
+.cajaImagen{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 50rem;
+    overflow: hidden;
+}
+.slider__titulo{
+    color: var(--blanco);
+    font-size: 8rem;
+}
+.slider__texto{
+    color: var(--blanco);
+    font-weight: 600;
+    line-height: 3rem;
+}
+/* seccion nosotros */
+.seccionNosotros{
+    display: grid;
+    place-content: center;
+    height: 40rem;
+    width: 100%;
+}
+.seccionNosotros__titulo{
+    font-weight: 700;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+.seccionNosotros__texto{
+    padding: 0rem 20rem;
+    font-size: 1.9rem;
+    line-height: 3rem;
+}
+/* seccion tienda */
+.seccionTienda{
+    background-color: var(--azul);
+    width: 100%;
+    padding: 6rem 0rem;
+}
+.seccionTienda__productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+.seccionTienda__titulo{
+    font-weight: 700;
+    font-size: 4rem;
+    padding-bottom: 4rem;
+}
+/* tarjetas tienda */
+.card{
+    width: 18rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card__titulo{
+    padding: 2rem 0rem;
+    font-weight: 500;
+}
+/* Seccion beneficios */
+.seccionBeneficios{
+    width: 100%;
+    height: 50rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    align-items: center;
+    background-image: url(/sources/img/bg-grid.png);
+}
+.seccionBeneficiosDos{
+    background-image: url(/sources/img/bg-grid2.png);
+}
+.seccionBeneficios__informacionTitulo{
+    padding: 2rem 0rem;
+    font-weight: 700;
+}
+.seccionBeneficios__informacionTexto{
+    padding: 0rem 4rem 2rem 0rem;
+}
+.seccionBeneficios__imagen{
+    display: flex;
+    justify-content: center;
+}
+.seccionBeneficios__imagenPhoto{
+    width: 70%;
+}
+/* footer */
+.navegacion--footer{
+    background-color: var(--gris);
+}
+.navegacion--footer, .navegacion__link--footer{
+    color: var(--blanco);
+}
+/* media queries */
+@media (max-width: 450px) {
+    .espaciador {
+        padding: 0rem 5rem;
+    }
+    .navegacion{
+        flex-direction: column;
+        height: 10rem;
+    }
+    .header{
+        padding: 5rem 5rem 0rem 5rem;
+        height: 85rem;
+        grid-template-columns: 1fr;
+    }
+    .imagen__paleta {
+        transform: translateX(144px);
+        height: 35rem;
+    }
+    .imagen__paletaDos {
+        transform: translateX(-144px);
+    }
+    .imagen__paletaRoja{
+        height: 35rem;
+    }
+    .imagen__paletaRojaA{
+        transform: translateX(-144px);
+    }
+    .slider__titulo{
+        font-size: 4rem;
+    }
+    .imagenSlider{
+        width: 34rem;
+    }
+    .seccionNosotros__texto{
+        padding: 0rem 0rem;
+    }
+    .slider{
+        padding-right: 0rem;
+        align-items: center;
+    }
+    .slider__texto{
+        text-align: center;
+    }
+    .seccionTienda{
+        padding: 5rem 0rem;
+    }
+    .seccionTienda__productos{
+        column-gap: 1rem;
+    }
+    .card{
+        width: 8rem;
+        height: 18rem;
+    }
+    .card__titulo{
+        font-size: 1.5rem;
+    }
+    .btnTienda{
+        padding: 1rem 2rem;
+    }
+    .seccionBeneficios{
+        grid-template-columns: 1fr;
+    }
+    .seccionBeneficios__informacion{
+        justify-items: center;
+    }
+}
